@@ -1,0 +1,79 @@
+html,body{
+  background-color: #212121;
+  color: #FFFFFF;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+h1{
+  font-weight: 300;
+  font-family: Didot;
+  font-size: 70px;
+  text-align: center;
+}
+
+.tabuleiro{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+.fundo_tabuleiro{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 550px;
+ 
+}
+.button_jogo{
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #141414;
+  width: 150px;
+  height: 150px;
+  margin: 6px;
+  border: 3px solid #FFFFFF;
+  color: #000CFF;
+  font-size: 130px;
+  font-family: sans-serif;
+  font-weight: 300;
+  
+}
+
+#ganhador{
+  
+  font-family: sans-serif;
+  
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  
+}
+#fundo_ganhador{
+  font-size: 80px;
+  font-weight: 300;
+  background: #141414;
+  border: 3px solid #FFFFFF;
+  border-radius: 20px;
+ width: fit-content;
+ height: fit-content;
+ padding: 30px 70px 30px 70px;
+}
+
+.ganhador{
+  margin: 0;
+}
+
+.x{
+  color: #FF0000;
+  font-size: 130px;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+
+
