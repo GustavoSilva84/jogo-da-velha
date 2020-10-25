@@ -1,2 +1,8 @@
-# calculadora
-Meu primeiro joguinho 
+Jogo da velha
+
+Versão: 1.0.0
+
+
+
+
+
