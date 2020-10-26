@@ -61,6 +61,7 @@ function checar(){
       if(tabuleiro_matriz[i][0] != ''){
         GANHADOR.innerHTML = '<p class="ganhador"> Ganhador X </p>'
         jogo = true
+        return
       }
       
     }else if(tabuleiro_matriz[i][0] == simbolos[1] && tabuleiro_matriz[i][1] == simbolos[1] && tabuleiro_matriz[i][2] == simbolos[1]) {
@@ -68,6 +69,7 @@ function checar(){
       if(tabuleiro_matriz[i][0] != '') {
         GANHADOR.innerHTML = '<p class="ganhador"> Ganhador O </p>'
         jogo = true
+        return
       }
       
     }          
@@ -78,6 +80,7 @@ function checar(){
       if(tabuleiro_matriz[0][i] != '') {
         GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador X </p>'
         jogo = true
+        return
       }
       
     }else if(tabuleiro_matriz[0][i] == simbolos[1] && tabuleiro_matriz[1][i] == simbolos[1] && tabuleiro_matriz[2][i] == simbolos[1]){
@@ -85,6 +88,7 @@ function checar(){
       if(tabuleiro_matriz[i][0] != '') {
         GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador O </p>'
         jogo = true
+        return
       }
       
     }
@@ -97,6 +101,7 @@ function checar(){
     if(tabuleiro_matriz[0][0] != '') {
       GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador X </p>'
       jogo = true
+      return
     }
     
   }else if(tabuleiro_matriz[0][0] == simbolos[1] && tabuleiro_matriz[1][1] == simbolos[1] && tabuleiro_matriz[2][2] == simbolos[1]){
@@ -104,6 +109,7 @@ function checar(){
     if(tabuleiro_matriz[0][0] != '') {
       GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador O </p>'
       jogo = true
+      return
     }
     
   }
@@ -114,6 +120,7 @@ function checar(){
     if(tabuleiro_matriz[0][2] != '') {
       GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador X </p>'
       jogo = true
+      return
     }
     
   }else if(tabuleiro_matriz[0][2] == simbolos[1] && tabuleiro_matriz[1][1] == simbolos[1] && tabuleiro_matriz[2][0] == simbolos[1]) {
@@ -121,6 +128,7 @@ function checar(){
     if(tabuleiro_matriz[0][2] != '') {
       GANHADOR.innerHTML =  '<p class="ganhador"> Ganhador O </p>';
       jogo = true;
+      return
     }
     
   }
