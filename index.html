@@ -3,38 +3,52 @@
   
   <head>
     <meta charset="utf-8">
-    <title> Jogo da velha </title>
+    <title> jogo da velha </title>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     
-    <!--
-    <h1> Jogo da velha </h1>
-    -->
-    <div class="tabuleiro">
-      
-      <div class="fundo_tabuleiro">
+    <main class="tabuleiro_jogo"><
+      <div class="fundo_tabuleiro_jogo">
         
-        <div onclick="button_click_jogo(0,0)" class="button_jogo" id="0_0">  </div> <!-- linha 0 coluna 0 -->                  
-        <div onclick="button_click_jogo(0,1)" class="button_jogo" id="0_1">  </div> <!-- linha 0 coluna 1 -->  
-        <div onclick="button_click_jogo(0,2)" class="button_jogo" id="0_2">  </div> <!-- linha 0 coluna 2 -->  
-        <div onclick="button_click_jogo(1,0)" class="button_jogo" id="1_0">  </div> <!-- linha 1 coluna 0 -->  
-        <div onclick="button_click_jogo(1,1)" class="button_jogo" id="1_1">  </div> <!-- linha 1 coluna 1 -->  
-        <div onclick="button_click_jogo(1,2)" class="button_jogo" id="1_2">  </div> <!-- linha 1 coluna 2 -->  
-        <div onclick="button_click_jogo(2,0)" class="button_jogo" id="2_0">  </div> <!-- linha 2 coluna 0 -->  
-        <div onclick="button_click_jogo(2,1)" class="button_jogo" id="2_1">  </div> <!-- linha 2 coluna 1 -->  
-        <div onclick="button_click_jogo(2,2)" class="button_jogo" id="2_2">  </div> <!-- linha 2 coluna 2 -->  
+        <div class="button_game" onclick="click_button_game(0,0)" id="row0_column0"></div> 
+        <div class="button_game" onclick="click_button_game(0,1)" id="row0_column1"></div> 
+        <div class="button_game" onclick="click_button_game(0,2)" id="row0_column2"></div>
+        
+        <div class="button_game" onclick="click_button_game(1,0)" id="row1_column0"></div>
+        <div class="button_game" onclick="click_button_game(1,1)" id="row1_column1"></div>    
+        <div class="button_game" onclick="click_button_game(1,2)" id="row1_column2"></div>      
+        
+        <div class="button_game" onclick="click_button_game(2,0)" id="row2_column0"></div>              
+        <div class="button_game" onclick="click_button_game(2,1)" id="row2_column1"></div>            
+        <div class="button_game" onclick="click_button_game(2,2)" id="row2_column2"></div> 
         
       </div>
-      
-    </div>
+    </main>
     
-    <div id="ganhador"> 
-    
-      <div id="fundo_ganhador">Ganhador</div>
-    
-    </div>
+    <main class="configuracao_do_jogo">
+      <div class="fundo_configuracao_do_jogo">
+        
+        <div class="fundo_vez_do_jogador">
+          <div class="vez_do_jogador"> 
+            <p class="texto_vez_do_jogador"> VEZ DO X </p>
+          </div>
+        </div>
+        
+        <div class="fundo_pontuacao">
+          <div class="pontuacao">
+            <p class="pontuacao_x">X = 0</p>
+            <p class="pontuacao_o">O = 0</p>
+          </div>
+        </div>
+        
+        <div class="fundo_button_iniciar_jogo">
+          <button onclick="iniciar_reiniciar_jogo()" class="button_iniciar_jogo"> Iniciar jogo</button>
+        </div>
+        
+      </div>
+    </main>
     
     <script src="main.js"></script>
   </body>
