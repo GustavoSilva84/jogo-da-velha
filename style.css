@@ -1,78 +1,115 @@
-html,body{
-  background-color: #212121;
-  color: #FFFFFF;
- display: flex;
- justify-content: center;
- flex-direction: column;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+body{
+  margin: 0;
+  
+  background: #121212;
 }
 
-h1{
-  font-weight: 300;
-  font-family: Didot;
-  font-size: 70px;
-  text-align: center;
-}
 
-.tabuleiro{
-  margin-top: 200px;
+.tabuleiro_jogo{
+  margin-top: 50px;
   display: flex;
   justify-content: center;
 }
-.fundo_tabuleiro{
+.fundo_tabuleiro_jogo{
+  width: 700px;
+  display: flex;
   flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  width: 550px;
- 
-}
-.button_jogo{
-  border-radius: 20px;
-  display: flex;
   justify-content: center;
   align-items: center;
-  background: #141414;
-  width: 150px;
-  height: 150px;
-  margin: 6px;
-  border: 3px solid #FFFFFF;
-  color: #000CFF;
-  font-size: 130px;
+}
+.button_game{
+  width: 175px;
+  height: 175px;
+  border-radius: 20px;
+  margin: 5px;
+  background: #282828;
+  display: flex;
+  font-size: 80px;
   font-family: sans-serif;
-  font-weight: 300;
-  
+  align-items: center;
+  justify-content: center;
+}
+#x{
+  color: #12B4FF
+}
+#o{
+  color: #FF125E
 }
 
-#ganhador{
+.configuracao_do_jogo{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
   
-  font-family: sans-serif;
-  
+}
+.fundo_configuracao_do_jogo{
+  width: 800px;
+  height: fit-content;
+  background: #282828;
+  padding: 30px;
+}
+
+.fundo_vez_do_jogador{
   justify-content: center;
   display: flex;
-  margin-top: 50px;
-  
 }
-#fundo_ganhador{
+.vez_do_jogador{
+  transition: 300ms;
+  width: 600px;
+  background: #12B4FF;
+  border-radius: 0 0 40px 40px;
+  justify-content: center;
+  display: flex;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+.texto_vez_do_jogador{
+  margin: 8px 0 8px 0;
   font-size: 80px;
-  font-weight: 300;
-  background: #141414;
-  border: 3px solid #FFFFFF;
-  border-radius: 20px;
- width: fit-content;
- height: fit-content;
- padding: 30px 70px 30px 70px;
 }
 
-.ganhador{
-  margin: 0;
+
+.fundo_pontuacao{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.pontuacao{
+  display: flex;
+  font-size: 80px;
+  font-family: sans-serif;
+  background: #353535;
+  width: fit-content;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 70px 20px 70px;
+}
+.pontuacao_x{
+  margin: 0 50px 0 50px;
+  color: #12B4FF
+}
+.pontuacao_o{
+  margin: 0 50px 0 50px;
+  color: #FF125E
 }
 
-.x{
-  color: #FF0000;
-  font-size: 130px;
+.fundo_button_iniciar_jogo{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.button_iniciar_jogo{
+  background: #353535;
+  border-radius: 60px;
+  font-size: 60px;
+  border: none;
+  padding: 20px 40px 20px 40px;
   font-family: sans-serif;
   font-weight: 300;
+  color: #9B9B9B;
+  transition: 500ms;
+  outline: none;
 }
 
 
