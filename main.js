@@ -157,6 +157,9 @@ function checar_empate() {
 function empate() {
   
   window.navigator.vibrate([50, 50])
+  button_iniciar_jogo.innerHTML = 'Iniciar nova partida';
+  pontuacao.style.fontSize = '75px'
+  pontuacao.style.padding = '20px 100px 20px 100px';
   pontuacao.innerHTML = 'Jogo empatado';
   jogando = false;
   return;
