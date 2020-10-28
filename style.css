@@ -76,23 +76,21 @@ body{
 }
 .pontuacao{
   display: flex;
-  font-size: 80px;
+  font-size: 0px;
   font-family: sans-serif;
   background: #353535;
   width: fit-content;
-  height: 130px;
+  
   justify-content: center;
   align-items: center;
   border-radius: 20px 70px 20px 70px;
+  transition: 500ms;
 }
-.pontuacao_x{
-  margin: 0 50px 0 50px;
+.pontuacao{
+  
   color: #12B4FF
 }
-.pontuacao_o{
-  margin: 0 50px 0 50px;
-  color: #FF125E
-}
+
 
 .fundo_button_iniciar_jogo{
   display: flex;
@@ -112,5 +110,16 @@ body{
   outline: none;
 }
 
-
+.button_iniciar_jogo_1{
+  background: #353535;
+  border-radius: 60px;
+  font-size: 0px;
+  border: none;
+  padding: 0px 0px 0px 0px;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #9B9B9B;
+  transition: 500ms;
+  outline: none;
+}
 
