@@ -23,7 +23,7 @@ function iniciar_reiniciar_jogo(){
   button_iniciar_jogo.style.color = 'white';
   button_iniciar_jogo.style.fontWeight = '400';
   
-  pontuacao.style.fontSize = '0px'
+  pontuacao.style.fontSize = '0px';
   pontuacao.style.padding = '0px 0px 0px 0px';
   pontuacao.innerHTML = '';
   
@@ -58,28 +58,43 @@ function click_button_game(row, column){
         vez_do_jogador.style.background = '#FF125E';
         vez_jogador = 'o';
         
-      }else{
-        
-        tabuleiro_matriz[row][column] = 'o';
-        
-        document.getElementById(id).innerHTML = '<p id="o"> O </p>';
-        
-        texto_vez_do_jogador.innerHTML = 'VEZ DO X';
-        vez_do_jogador.style.background = '#12B4FF';
-        vez_jogador = 'x';
-        
       }
     }
-    checar_ganhador();
-  }
+      do{
+        var t = Math.round(Math.random() * 2)
+        var u = Math.round(Math.random() * 2)
+      }while(tabuleiro_matriz[t][u] != '')
+        
+      tabuleiro_matriz[t][u] = 'o';
+     
+      var k = `row${t}_column${u}`
+     
+      document.getElementById(k).innerHTML = '<p id="o"> O </p>';
+        
+      texto_vez_do_jogador.innerHTML = 'VEZ DO X';
+      vez_do_jogador.style.background = '#12B4FF';
+      vez_jogador = 'x';
+      }
+    
+        
+      
+        /*
+          tabuleiro_matriz[row][column] = 'o';
+          
+          document.getElementById(id).innerHTML = '<p id="o"> O </p>';
+          
+          texto_vez_do_jogador.innerHTML = 'VEZ DO X';
+          vez_do_jogador.style.background = '#12B4FF';
+          vez_jogador = 'x';
+        */
+         
+   checar_ganhador();
+  
   
 };
 
-
-
 function checar_ganhador(){
  
-  
   if(jogando === true){
     
     for(let check_row = 0; check_row < 3; check_row++) {
@@ -87,7 +102,7 @@ function checar_ganhador(){
         
         if(tabuleiro_matriz[check_row][0] === tabuleiro_matriz[check_row][1] && tabuleiro_matriz[check_row][0] == tabuleiro_matriz[check_row][2]) {                      
           if(tabuleiro_matriz[check_row][0] != '') {
-              
+
             ganhou();
             return;
           
@@ -106,7 +121,6 @@ function checar_ganhador(){
       }
     }
     
-    
     if(tabuleiro_matriz[0][0] == tabuleiro_matriz[1][1] && tabuleiro_matriz[0][0] == tabuleiro_matriz[2][2]){
       if(tabuleiro_matriz[0][0] != ''){
         
@@ -115,7 +129,6 @@ function checar_ganhador(){
        
       }
     }
-    
     
     if(tabuleiro_matriz[0][2] == tabuleiro_matriz[1][1] && tabuleiro_matriz[0][2] == tabuleiro_matriz[2][0]) {
       if(tabuleiro_matriz[0][2] != '') {
@@ -132,7 +145,6 @@ function checar_ganhador(){
   }
   
 }
-
 
 function checar_empate() {
   
@@ -153,46 +165,52 @@ function checar_empate() {
  
 }
 
-
 function empate() {
   
-  window.navigator.vibrate([50, 50])
   button_iniciar_jogo.innerHTML = 'Iniciar nova partida';
-  pontuacao.style.fontSize = '75px'
+  
+  window.navigator.vibrate([50, 50]);
+  
+  pontuacao.style.fontSize = '75px';
   pontuacao.style.padding = '20px 100px 20px 100px';
   pontuacao.innerHTML = 'Jogo empatado';
+  
   jogando = false;
+  
   return;
   
 }
 
-
 function ganhou() {
   
   if(vez_jogador != 'o') {
-   
-    button_iniciar_jogo.innerHTML = 'Iniciar nova partida'
-    window.navigator.vibrate([100, 100, 100, 100, 100, 100, 100, 500, 600, 700, 100, 0, 100])
     
-    pontuacao.style.fontSize = '75px'
+    button_iniciar_jogo.innerHTML = 'Iniciar nova partida';
+    
+    window.navigator.vibrate([100, 100, 100, 100, 100, 100, 100, 500, 600, 700, 100, 0, 100]);
+    
+    pontuacao.style.fontSize = '75px';
     pontuacao.style.padding = '10px 130px 10px 130px';
-    pontuacao.style.color = '#FF125E'
+    pontuacao.style.color = '#FF125E';
     pontuacao.innerHTML = 'Vencedor O';
     
     jogando = false;
+    
     return;
   
   }else if(vez_jogador != 'x') {
     
     button_iniciar_jogo.innerHTML = 'Iniciar nova partida'
-    window.navigator.vibrate([100, 100, 100, 100, 100, 100, 100, 500, 600, 700, 100, 0, 100])
     
-    pontuacao.style.fontSize = '75px'
+    window.navigator.vibrate([100, 100, 100, 100, 100, 100, 100, 500, 600, 700, 100, 0, 100]);
+    
+    pontuacao.style.fontSize = '75px';
     pontuacao.style.padding = '10px 130px 10px 130px';
-    pontuacao.style.color = '#12B4FF'
+    pontuacao.style.color = '#12B4FF';
     pontuacao.innerHTML = 'Vencedor X';
     
     jogando = false;
+    
     return;
   
   }
